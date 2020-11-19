@@ -13,7 +13,7 @@ This document contains the following details:
     • How to Use the Ansible Build 
 Description of the Topology
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
-Load balancing ensures that the application will be highly redundant, in addition to restricting the number of access points to the network.
+Load balancing ensures that the application will be highly available, in addition to restricting the number of access points to the network.
       
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system metrics.
       
@@ -29,16 +29,16 @@ Gateway
 Linux
 Web-1
 
-DVWA Container
+Web Server
 10.0.0.6
 Linux
 Web-2
 
-DVWA Container
+Web Server
 10.0.0.9
 Linux
 Web-3
-DVWA Container
+Web Server
 10.0.0.10
 Linux
 ELK
@@ -50,28 +50,27 @@ Access Policies
 The machines on the internal network are not exposed to the public Internet.
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
     • 71.204.111.86 (local ip)
-Machines within the network can only be accessed by SSH from the Ansible container within the Jump Box with IP address 52.149.151.101.
+Machines within the network can only be accessed by SSH from the Ansible container within the Jump Box.
       
 A summary of the access policies in place can be found in the table below.
 Name
 Publicly Accessible
 Allowed IP Addresses
 Jump Box
-Yes/No
+Yes
 71.204.111.86
 Web-1
 No
-10.0.0.4
+10.0.0.1-254
 Web-2
 No
-10.0.0.4
+10.0.0.1-254
 Web-3
 No
-10.0.0.4
+10.0.0.1-254
 ELK
 No
-10.0.0.4 
-71.204.111.86
+10.0.0.1-254
 Elk Configuration
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
     • Ansible can be to update many servers at the same time. It is relatively easy to learn and writes its playbooks in YAML, which make it great for configuration management and automation.
