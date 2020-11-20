@@ -36,34 +36,14 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
       
 The configuration details of each machine may be found below. 
 
-Name
-Function
-IP Address
-Operating System
-Jump Box
+| Name    |Function | IP Address | Operating System |
+| ---|--- | --- | --- |
+| Jump Box | Gateway | 10.0.0.4 | Linux |
+| Web-1 | Web Server | 10.0.0.6 | Linux |
+| Web-2 | Web Server | 10.0.0.9 | Linux |
+| Web-3 | Web Server | 10.0.0.10 | Linux |
+| ELK | ELK Container | 10.1.0.4 | Linux |
 
-Gateway
-10.0.0.4
-Linux
-Web-1
-
-Web Server
-10.0.0.6
-Linux
-Web-2
-
-Web Server
-10.0.0.9
-Linux
-Web-3
-Web Server
-10.0.0.10
-Linux
-ELK
-
-ELK Container
-10.1.0.4
-Linux
 
 ### Access Policies
 
@@ -77,24 +57,14 @@ Machines within the network can only be accessed by **SSH from the Ansible conta
       
 A summary of the access policies in place can be found in the table below.
 
-Name
-Publicly Accessible
-Allowed IP Addresses
-Jump Box
-Yes
-71.204.111.86
-Web-1
-No
-10.0.0.1-254
-Web-2
-No
-10.0.0.1-254
-Web-3
-No
-10.0.0.1-254
-ELK
-No
-10.0.0.1-254
+| **Name | Publicly Accessible | Allowed IP Addresses** |
+| --- | --- | --- |
+| Jump Box | Yes | 71.204.111.86 |
+| Web-1 | No | 10.0.0.1-254 |
+| Web-2 | No | 10.0.0.1-254 |
+| Web-3 | No | 10.0.0.1-254 |
+| ELK | No | 10.0.0.1-254 |
+
 
 ### Elk Configuration
 
