@@ -4,7 +4,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-
+![alt text](https://github.com/itsBurke/Azure-Project-1/blob/main/Diagrams/Cloud_Security_Diagram.PNG)
 
 
 
